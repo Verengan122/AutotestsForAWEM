@@ -1,5 +1,6 @@
 package awem.autotests.steps;
 
+import awem.autotests.helpers.DriverUtils;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Test;
@@ -21,32 +22,50 @@ public class StepsTests {
     }
 
     @Step("Проверка успешной смены языка")
-    public StepsTests CheckingLanguageChange(){
+    public StepsTests checkingLanguageChange() {
         $x("//*[contains(text(), 'Create games. Evolve within a team')]").shouldBe(Condition.visible);
         return this;
     }
 
+    @Step("Проверка успешной смены языка")
+    public StepsTests xx(String title) {
+        $x("//div[contains(@class, 'popup popup-vacancy')]//*[@class='popup__title' and text()='" + title + "']");
+        return this;
+    }
+
     @Step("Наличие игры по ссылке")
-    public StepsTests thePresenceOfTheGame(){
+    public StepsTests thePresenceOfTheGame() {
         open(baseUrl);
         $x("//*[@href='https://awem.com/games/']").click();
         return this;
     }
 
     @Step("Проверка наличия игры")
-    public StepsTests CheckingNeedGame(){
-        $x("//*[@class='image-block__content']").shouldBe(Condition.visible);
+    public StepsTests checkingNeedGame() {
+        $x("//*[text() = 'Cradle of Empires']").shouldBe(Condition.visible);
         return this;
     }
 
     @Step("Проверка заголовка главной страницы AWEM")
-    public StepsTests CheckingTitleAwem(){
+    public StepsTests checkTitleAwem() {
         open(baseUrl);
-            String expectedTitle = "Awem Games";
-            String actualTitle = title();
 
-            assertThat(actualTitle).isEqualTo(expectedTitle);
+        String expectedTitle = "Awem Games";
+        String actualTitle = title();
+
+        assertThat(actualTitle).isEqualTo(expectedTitle);
         return this;
     }
 
+    @Step("Проверка журнала консоли на наличие ошибок")
+    public StepsTests checkingTheConsoleLog() {
+        open(baseUrl);
+
+        String consoleLogs = DriverUtils.getConsoleLogs();
+        String errorText = "SEVERE";
+
+        assertThat(consoleLogs).doesNotContain(errorText);
+        return this;
+
+    }
 }

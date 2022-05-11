@@ -1,9 +1,10 @@
-package awem.autotests.tests;
+package awem.autotests.config;
 
 import awem.autotests.config.Project;
 import awem.autotests.helpers.AllureAttachments;
 import awem.autotests.helpers.DriverSettings;
 import awem.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.junit5.AllureJunit5;
@@ -17,6 +18,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 public class TestBase {
     @BeforeAll
     static void setUp() {
+        Configuration.baseUrl = "https://awem.com/";
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
@@ -33,8 +35,8 @@ public class TestBase {
 
         Selenide.closeWebDriver();
 
-        if (Project.isVideoOn()) {
-            AllureAttachments.addVideo(sessionId);
-        }
+//        if (Project.isVideoOn()) {
+//            AllureAttachments.addVideo(sessionId);
+//        }
     }
 }
