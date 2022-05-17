@@ -2,6 +2,8 @@ package awem.autotests.config;
 
 import org.aeonbits.owner.ConfigFactory;
 
+import java.util.Optional;
+
 public class Project {
     public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
 
@@ -10,10 +12,12 @@ public class Project {
     }
 
     public static boolean isRemoteWebDriver() {
-        return config.remoteDriverUrl() == null || !config.remoteDriverUrl().equals("");
+        Optional<String> optionalS = Optional.ofNullable(config.remoteDriverUrl());
+        return optionalS.isPresent();
     }
 
     public static boolean isVideoOn() {
-        return config.videoStorage() != null || !config.videoStorage().equals("");
+        Optional<String> optionalS = Optional.ofNullable(config.videoStorage());
+        return optionalS.isPresent();
     }
 }
