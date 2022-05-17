@@ -16,8 +16,10 @@ public class StepsTests extends PagesObjects {
     public StepsTests сhangeLanguageOnSite() {
 
         open(baseUrl);
-        itemlanguageActive.hover();
-        itemlanguage.click();
+        itemlanguageActive
+                .hover();
+        itemlanguage
+                .click();
 
         return this;
 
@@ -25,65 +27,81 @@ public class StepsTests extends PagesObjects {
 
     @Step("Проверка успешной смены языка")
     public StepsTests checkLanguageChange() {
-        shouldText.shouldBe(Condition.visible);
+
+        shouldText
+                .shouldBe(Condition.visible);
+
         return this;
     }
 
     @Step("Наличие игры Cradle of Empires во вкладке игры")
     public StepsTests checkIfTheGameYouWantIsInTheGamesTab() {
+
         open(baseUrl);
-        $x("//*[@href='https://awem.com/games/']")
+        awemGames
                 .click();
+
         return this;
     }
 
     @Step("Проверка наличия нужной игры во вкладке игры")
     public StepsTests checkTheDisplayOfTheDesiredGame() {
         $x("//*[text() = 'Cradle of Empires']").shouldBe(Condition.visible);
+
         return this;
     }
 
     @Step("Проверка заголовка главной страницы сайта ")
     public StepsTests checkTitleSiteAwem() {
+
         open(baseUrl);
 
         String expectedTitle = "Awem Games";
         String actualTitle = title();
 
         assertThat(actualTitle).isEqualTo(expectedTitle);
+
         return this;
     }
 
     @Step("Проверка журнала консоли на наличие ошибок")
     public StepsTests checkingTheConsoleLog() {
+
         open(baseUrl);
 
         String consoleLogs = DriverUtils.getConsoleLogs();
         String errorText = "SEVERE";
 
         assertThat(consoleLogs).doesNotContain(errorText);
+
         return this;
     }
 
     @Step("Проверка наличия вакансии QA midle на сайте")
     public StepsTests сheckingAvailabilityVacanciesOnSite() {
+
         open(baseUrl);
-        $x("//*[@href='https://awem.com/careers/']")
+        awemCariers
                 .shouldBe(visible).click();
-        $x("//*[@href='https://awem.com/careers/qa/']")
-                .scrollIntoView("{block : \"center\"}").shouldBe(visible).click();
-        $x("//*[@href='https://awem.com/vacancy/middle-software-testing-engineer/']")
-                .scrollIntoView("{block : \"center\"}").click();
-        $x("//*[@class='btn js-popup-open btn--vacancy-intro']")
-                .scrollIntoView("{block : \"center\"}").click();
+        cariersQA
+                .scrollIntoView("{block : \"center\"}")
+                .shouldBe(visible).click();
+        vacancuMidleQA
+                .scrollIntoView("{block : \"center\"}")
+                .click();
+        buttonResponse
+                .scrollIntoView("{block : \"center\"}")
+                .click();
+
         return this;
     }
 
     @Step("Проверка открытия формы отправки формы резюме")
     public StepsTests validationOpeningFormsSubmitResume() {
-        $x("//div[contains(@class, 'popup popup-vacancy')]" +
-                "//*[@class='popup__title' and text()='Откликнуться на вакансию']")
+
+        searchForTextInForm
                 .shouldBe(visible);
+
         return this;
     }
 
