@@ -1,6 +1,7 @@
 package awem.autotests.steps;
 
 import awem.autotests.helpers.DriverUtils;
+import awem.autotests.pages.PagesObjects;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 
@@ -9,23 +10,22 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StepsTests {
+public class StepsTests extends PagesObjects {
+
     @Step("Смена языка на Англ.")
     public StepsTests сhangeLanguageOnSite() {
 
         open(baseUrl);
-        $x("//*[@class='header__language-item header__language-item--active']")
-                .hover();
-        $x("//*[@class='header__language-item']")
-                .click();
+        itemlanguageActive.hover();
+        itemlanguage.click();
+
         return this;
 
     }
 
     @Step("Проверка успешной смены языка")
     public StepsTests checkLanguageChange() {
-        $x("//*[contains(text(), 'Create games. Evolve within a team')]")
-                .shouldBe(Condition.visible);
+        shouldText.shouldBe(Condition.visible);
         return this;
     }
 
@@ -84,6 +84,12 @@ public class StepsTests {
         $x("//div[contains(@class, 'popup popup-vacancy')]" +
                 "//*[@class='popup__title' and text()='Откликнуться на вакансию']")
                 .shouldBe(visible);
+        return this;
+    }
+
+    @Step("Проверка открытия формы отправки формы резюме")
+    public StepsTests validationOpeningFormsSubmi22tResume() {
+
         return this;
     }
 }
