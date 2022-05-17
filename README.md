@@ -3,16 +3,16 @@
 
 ## :scroll: Структура:
 
-- <a href="#point_up_2-технологии-и-инструменты">Стек</a>
-- <a href="#point_up_2-проведенные автотесты">Автотесты</a>
-- <a href="#point_up_2-сборка-в-Jenkins">Сборка в Jenkins</a>
-- <a href="#point_up_2-запуск-из-терминала">Запуск из терминала</a>
-- <a href="#point_up_2-allure-отчет">Allure отчет</a>
-- <a href="#point_up_2-отчет-в-telegram">Отчет в Telegram</a>
-- <a href="#point_up_2-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
+- <a href="#toolbox:-технологии-и-инструменты">Стек</a>
+- <a href="#arrow_forward:-проведенные автотесты">Автотесты</a>
+- <a href="#bar_chart-сборка-в-Jenkins">Сборка в Jenkins</a>
+- <a href="#outbox_tray-запуск-из-терминала">Запуск из терминала</a>
+- <a href="#loudspeaker-allure-отчет">Allure отчет</a>
+- <a href="#robot-отчет-в-telegram">Отчет в Telegram</a>
+- <a href="#film_strip-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
 
 
-##:toolbox: Стек:
+### :toolbox: Стек:
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
 <img width="6%" title="Java" src="images/logo/Java.svg">
@@ -26,7 +26,7 @@
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
 
-#:arrow_forward: Автотетсы
+## :arrow_forward: Автотетсы
 -Проверка наличия Title (работоспособность главнйо страницы)
 -Проверка возомжности смены языка
 -Проверка наличия игры Cradle of Empires по влкаде "Игры"
@@ -75,7 +75,7 @@ test
 <img title="Allure Overview Dashboard" src="images/screenshots/allure-report.png">
 </p>
 
-- ### Страница с проведенными тестами
+- ### :clipboard: Страница с проведенными тестами
 <p align="center">
 <img title="Allure Test Page" src="images/screenshots/pages_tests.png">
 </p>
@@ -85,8 +85,8 @@ test
 <img title="Telegram notification message" src="images/screenshots/telegram.png">
 </p>
 
-## :point_up_2: Видео примеры прохождения тестов
+## :film_strip: Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
-  <img title="Selenoid Video" src="images/video/779a2f71eef66db9.mp4">
+  <img title="Selenoid Video" src="images/gif/779a2f71eef66db9.gif">
 </p>
