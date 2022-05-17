@@ -46,7 +46,8 @@ public class StepsTests extends PagesObjects {
 
     @Step("Проверка наличия нужной игры во вкладке игры")
     public StepsTests checkTheDisplayOfTheDesiredGame() {
-        $x("//*[text() = 'Cradle of Empires']").shouldBe(Condition.visible);
+
+        awemGamesCradleOfEmpires.shouldBe(Condition.visible);
 
         return this;
     }

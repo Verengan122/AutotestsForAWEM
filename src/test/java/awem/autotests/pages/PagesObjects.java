@@ -1,5 +1,6 @@
 package awem.autotests.pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
@@ -15,6 +16,7 @@ public class PagesObjects {
     vacancuMidleQA  = $x("//*[@href='https://awem.com/vacancy/middle-software-testing-engineer/']"),
     buttonResponse = $x("//*[@class='btn js-popup-open btn--vacancy-intro']"),
     searchForTextInForm = $x("//div[contains(@class, 'popup popup-vacancy')]" +
-            "//*[@class='popup__title' and text()='Откликнуться на вакансию']");
+            "//*[@class='popup__title' and text()='Откликнуться на вакансию']"),
+    awemGamesCradleOfEmpires = $x("//*[text() = 'Cradle of Empires']");
 
 }
