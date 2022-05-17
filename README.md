@@ -1,5 +1,5 @@
-Проект по автоматизации тестирования awem.com
-<a href="https://awem.com/"><img width="30%" title="AWEM" src="images/logo/logo.jpeg"></a>
+# Проект по автоматизации тестирования awem.com
+<a href="https://awem.com/"><img width="100%" title="AWEM" src="images/logo/Awem_logo.png"></a>
 
 ## :scroll: Структура:
 
