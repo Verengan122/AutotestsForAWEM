@@ -1,7 +1,7 @@
 #Проект по автоматизации тестирования awem.com
 <a href="https://awem.com/"><img width="30%" title="AWEM" src="images/logo/logo.jpeg"></a>
 
-## :scroll: Струттура:
+## :scroll: Структура:
 
 - <a href="#point_up_2-технологии-и-инструменты">Стек</a>
 - <a href="#point_up_2-проведенные автотесты">Автотесты</a>
