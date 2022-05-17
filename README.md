@@ -12,7 +12,7 @@
 - <a href="#film_strip-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
 
 
-### :toolbox: Стек:
+## :toolbox: Стек:
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
 <img width="6%" title="Java" src="images/logo/Java.svg">
