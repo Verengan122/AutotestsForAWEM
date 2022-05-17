@@ -33,12 +33,12 @@
 Проверка наличия вакансии на сайте
 
 ## :bar_chart: Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/AWEM_Tests_QA_Guru_11_Diploma/">Сборка в Jenkins</a>
+## <a target="_blank" href="https://jenkins.autotests.cloud/job/AWEM_Tests_QA_Guru_11_Diploma/">Сборка в Jenkins</a>
 <p align="center">
-<img title="Jenkins Dashboard" src="images/screenshots/Скриношот">
+<img title="Jenkins Dashboard" src="images/screenshots/jenkins_pr.png">
 </p>
 
-### :hammer_and_wrench: Параметры сборки в Jenkins:
+## :hammer_and_wrench: Параметры сборки в Jenkins:
 
 - repository (возможность сборки со своим репозиторием)
 - browser (браузер, по умолчанию chrome)
@@ -49,7 +49,7 @@
 - threads (количество потоков, по умолчанию 1)
 - allure notification version (выбор версии Allure Notification, по умолчанию 2.2.3)
 
-## :point_up_2: Запуск из терминала
+## :outbox_tray: Запуск из терминала
 Локальный запуск:
 ```
 gradle clean test
@@ -68,3 +68,24 @@ test
 -DbrowserMobileView="${BROWSER_MOBILE}"
 -Dthreads=${THREADS}
 ```
+## :loudspeaker: Allure отчет
+- ### Главный экран отчета
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure-report.png">
+</p>
+
+- ### Страница с проведенными тестами
+<p align="center">
+<img title="Allure Test Page" src="images/screenshots/pages_tests.png">
+</p>
+
+## :robot: Отчет в Telegram
+<p align="center">
+<img title="Telegram notification message" src="images/screenshots/telegram.png">
+</p>
+
+## :point_up_2: Видео примеры прохождения тестов
+> К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
+<p align="center">
+  <img title="Selenoid Video" src="images/video/779a2f71eef66db9.mp4">
+</p>
