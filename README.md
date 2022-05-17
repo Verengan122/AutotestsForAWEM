@@ -3,8 +3,8 @@
 
 ## :scroll: Структура:
 
-- <a href="#toolbox:-технологии-и-инструменты">Стек</a>
-- <a href="#arrow_forward:-проведенные автотесты">Автотесты</a>
+- <a href="#toolbox-технологии-и-инструменты">Стек</a>
+- <a href="#arrow_forward-проведенные автотесты">Автотесты</a>
 - <a href="#bar_chart-сборка-в-Jenkins">Сборка в Jenkins</a>
 - <a href="#outbox_tray-запуск-из-терминала">Запуск из терминала</a>
 - <a href="#loudspeaker-allure-отчет">Allure отчет</a>
