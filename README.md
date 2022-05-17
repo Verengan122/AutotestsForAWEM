@@ -1,4 +1,4 @@
-#Проект по автоматизации тестирования awem.com
+Проект по автоматизации тестирования awem.com
 <a href="https://awem.com/"><img width="30%" title="AWEM" src="images/logo/logo.jpeg"></a>
 
 ## :scroll: Структура:
@@ -10,6 +10,7 @@
 - <a href="#point_up_2-allure-отчет">Allure отчет</a>
 - <a href="#point_up_2-отчет-в-telegram">Отчет в Telegram</a>
 - <a href="#point_up_2-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
+
 
 ##:toolbox: Стек:
 <p align="center">
@@ -25,7 +26,7 @@
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
 
-##:arrow_forward: Автотетсы
+#:arrow_forward: Автотетсы
 -Проверка наличия Title (работоспособность главнйо страницы)
 -Проверка возомжности смены языка
 -Проверка наличия игры Cradle of Empires по влкаде "Игры"
