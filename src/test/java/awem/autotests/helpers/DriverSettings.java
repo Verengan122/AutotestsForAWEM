@@ -14,7 +14,6 @@ public class DriverSettings {
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
-//        Configuration.baseUrl = Project.config.webUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -25,11 +24,11 @@ public class DriverSettings {
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--lang=en-en");
 
-//        if (Project.isWebMobile()) { // for chrome only
-//            Map<String, Object> mobileDevice = new HashMap<>();
-//            mobileDevice.put("deviceName", Project.config.browserMobileView());
-//            chromeOptions.setExperimentalOption("mobileEmulation", mobileDevice);
-//        }
+        if (Project.isWebMobile()) { // for chrome only
+            Map<String, Object> mobileDevice = new HashMap<>();
+            mobileDevice.put("deviceName", Project.config.browserMobileView());
+            chromeOptions.setExperimentalOption("mobileEmulation", mobileDevice);
+        }
 
         if (Project.isRemoteWebDriver()) {
             capabilities.setCapability("enableVNC", true);

@@ -24,7 +24,9 @@
 <img width="10%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="10%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="10%" title="Telegram" src="images/logo/Telegram.svg">
+<img width="10%" title="Xpath" src="images/logo/xpath_logo.svg">
 </p>
+
 
 ## :arrow_forward: Автотетсы
 -Проверка наличия Title (работоспособность главнйо страницы)
