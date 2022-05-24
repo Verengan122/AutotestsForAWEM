@@ -8,7 +8,7 @@
 - <a href="#bar_chart-сборка-в-Jenkins">Сборка в Jenkins</a>
 - <a href="#outbox_tray-запуск-из-терминала">Запуск из терминала</a>
 - <a href="#loudspeaker-allure-отчет">Allure отчет</a>
-- <a href="#ticket-Интеграция-с-Allure TestOps">Интеграция с Allure TestOps</a>
+- <a href="#ticket-Интеграция-с-Allure-TestOps">Интеграция с Allure TestOps</a>
 - <a href="#robot-отчет-в-telegram">Отчет в Telegram</a>
 - <a href="#film_strip-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
 
