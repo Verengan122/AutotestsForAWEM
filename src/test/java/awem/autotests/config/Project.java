@@ -7,9 +7,10 @@ import java.util.Optional;
 public class Project {
     public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
 
-//    public static boolean isWebMobile() {
-//        return config.videoStorage() != null || !config.browserMobileView().equals("");
-//    }
+    public static boolean isWebMobile() {
+        Optional<String> optionalS = Optional.ofNullable(config.remoteDriverUrl());
+        return optionalS.isPresent();
+    }
 
     public static boolean isRemoteWebDriver() {
         Optional<String> optionalS = Optional.ofNullable(config.remoteDriverUrl());
