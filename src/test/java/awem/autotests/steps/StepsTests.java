@@ -14,101 +14,63 @@ public class StepsTests extends PagesObjects {
 
     @Step("Смена языка на Англ.")
     public StepsTests сhangeLanguageOnSite() {
-
         open(baseUrl);
-        itemlanguageActive
-                .hover();
-        itemlanguage
-                .click();
-
+        itemlanguageActive().hover();
+        itemlanguage().click();
         return this;
 
     }
 
     @Step("Проверка успешной смены языка")
     public StepsTests checkLanguageChange() {
-
-        shouldText
-                .shouldBe(Condition.visible);
-
+        shouldText("Create games. Evolve within a team").shouldBe(Condition.visible);
         return this;
     }
 
     @Step("Наличие игры Cradle of Empires во вкладке игры")
     public StepsTests checkIfTheGameYouWantIsInTheGamesTab() {
-
         open(baseUrl);
-        awemGames
-                .click();
-
+        awemGames().click();
         return this;
     }
 
     @Step("Проверка наличия нужной игры во вкладке игры")
     public StepsTests checkTheDisplayOfTheDesiredGame() {
-
-        awemGamesCradleOfEmpires.shouldBe(Condition.visible);
-
+        awemGamesCradleOfEmpires("Cradle of Empires").shouldBe(Condition.visible);
         return this;
     }
 
     @Step("Проверка заголовка главной страницы сайта ")
     public StepsTests checkTitleSiteAwem() {
-
         open(baseUrl);
-
         String expectedTitle = "Awem Games";
         String actualTitle = title();
-
         assertThat(actualTitle).isEqualTo(expectedTitle);
-
         return this;
     }
 
     @Step("Проверка журнала консоли на наличие ошибок")
     public StepsTests checkingTheConsoleLog() {
-
         open(baseUrl);
-
         String consoleLogs = DriverUtils.getConsoleLogs();
         String errorText = "SEVERE";
-
         assertThat(consoleLogs).doesNotContain(errorText);
-
         return this;
     }
 
     @Step("Проверка наличия вакансии QA midle на сайте")
     public StepsTests сheckingAvailabilityVacanciesOnSite() {
-
         open(baseUrl);
-        awemCariers
-                .shouldBe(visible).click();
-        cariersQA
-                .scrollIntoView("{block : \"center\"}")
-                .shouldBe(visible).click();
-        vacancuMidleQA
-                .scrollIntoView("{block : \"center\"}")
-                .click();
-        buttonResponse
-                .scrollIntoView("{block : \"center\"}")
-                .click();
-
+        awemCariers().shouldBe(visible).click();
+        cariersQA().scrollIntoView("{block : \"center\"}").shouldBe(visible).click();
+        vacancuMidleQA().scrollIntoView("{block : \"center\"}").click();
+        buttonResponse().scrollIntoView("{block : \"center\"}").click();
         return this;
     }
 
     @Step("Проверка открытия формы отправки формы резюме")
     public StepsTests validationOpeningFormsSubmitResume() {
-
-        searchForTextInForm
-                .shouldBe(visible);
-
-        return this;
-    }
-
-    @Step("Проверка открытия формы отправки формы резюме")
-    public StepsTests validationOpeningFormsSubmi22tResume() {
-
+        searchForTextInForm("Откликнуться на вакансию").shouldBe(visible);
         return this;
     }
 }
