@@ -63,16 +63,10 @@ gradle clean test
 
 Удаленный запуск:
 ```
+gradle
 clean
 test
--Duser=${USER}
--Dpassword=${PASSWORD}
--Dbrowser=${BROWSER}
--DremoteDriverUrl=https://${USERNAME}:${PASSWORD}@${REMOTE_DRIVER_URL}/wd/hub/
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DbrowserMobileView="${BROWSER_MOBILE}"
--Dthreads=${THREADS}
+-Dtype=remote
 ```
 ## :loudspeaker: Allure отчет
 - ### Главный экран отчета
