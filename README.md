@@ -24,7 +24,6 @@
 <img width="10%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="10%" title="Selenoid" src="images/logo/Selenoid.svg">
 <img width="10%" title="Allure Report" src="images/logo/Allure_Report.svg">
-<img width="10%" title="Xpath" src="images/logo/xpath_logo.svg">
 <img width="10%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="10%" title="Telegram" src="images/logo/Telegram.svg">
 
