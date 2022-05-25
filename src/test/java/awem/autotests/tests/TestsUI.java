@@ -1,7 +1,7 @@
 package awem.autotests.tests;
 
 import awem.autotests.config.TestBase;
-import awem.autotests.steps.StepsTests;
+import awem.autotests.pages.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -10,14 +10,14 @@ public class TestsUI extends TestBase {
     @Test
     @DisplayName("Проверка заголовка")
     void checkingTitle() {
-        new StepsTests()
+        new TitlePage()
                 .checkTitleSiteAwem();
     }
 
     @Test
     @DisplayName("Проверка смены языка сайта на англ")
     void languageChange() {
-        new StepsTests()
+        new LanguagePage()
                 .сhangeLanguageOnSite()
                 .checkLanguageChange();
     }
@@ -25,7 +25,7 @@ public class TestsUI extends TestBase {
     @Test
     @DisplayName("Проверка наличия игры Cradle of Empires по влкаде Игры")
     void presenceOfTheGame() {
-        new StepsTests()
+        new GamesPage()
                 .checkIfTheGameYouWantIsInTheGamesTab()
                 .checkTheDisplayOfTheDesiredGame();
     }
@@ -33,14 +33,14 @@ public class TestsUI extends TestBase {
     @Test
     @DisplayName("Проверка журнала консоли на наличие ошибок")
     void consoleShouldNotHaveErrorsTest() {
-        new StepsTests()
+        new ConsolePage()
                 .checkingTheConsoleLog();
     }
 
     @Test
     @DisplayName("Проверка наличия вакансии на сайте")
     void job() {
-    new StepsTests()
+    new VacanciPage()
             .сheckingAvailabilityVacanciesOnSite()
             .validationOpeningFormsSubmitResume();
     }
