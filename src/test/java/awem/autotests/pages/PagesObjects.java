@@ -39,7 +39,8 @@ public class PagesObjects {
     }
 
     public static SelenideElement searchForTextInForm(String Text) {
-        return $x("//div[contains(@class, 'popup popup-vacancy')]//*[@class='popup__title' and text()='" + Text + "']");
+        return $x("//div[contains(@class, 'popup popup-vacancy')]" +
+                "//*[@class='popup__title' and text()='" + Text + "']");
     }
 
     public static SelenideElement awemGamesCradleOfEmpires(String Text) {
