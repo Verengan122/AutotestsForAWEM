@@ -82,7 +82,7 @@ test
 ## :ticket: Интеграция с Allure TestOps
 - ### Экран с результатами запуска тестов
 <p align="center">
-<img title="TestOps Launch Page" src="images/screenshots/AllureTestOps.png">
+<img title="TestOps Launch Page" src="images/screenshots/Alure.png">
 </p>
 
 - ### Страница с тестами в TestOps

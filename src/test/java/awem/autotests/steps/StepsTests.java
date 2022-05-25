@@ -18,7 +18,6 @@ public class StepsTests extends PagesObjects {
         itemlanguageActive().hover();
         itemlanguage().click();
         return this;
-
     }
 
     @Step("Проверка успешной смены языка")
