@@ -50,7 +50,6 @@
 - browser (браузер, по умолчанию chrome)
 - version (версия браузера, по умолчанию 100.0)
 - size (размер окна браузера, по умолчанию 1920x1080)
-- browsermobile (возможность запуска в мобильном браузере)
 - remoteUrl (адрес удаленного сервера selenoid)
 - threads (количество потоков, по умолчанию 1)
 - allure notification version (выбор версии Allure Notification, по умолчанию 2.2.3)
