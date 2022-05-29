@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.title;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestsUI extends TestBase {
+public class AwemUITests extends TestBase {
 
     @Test
     @DisplayName("Проверка заголовка")
