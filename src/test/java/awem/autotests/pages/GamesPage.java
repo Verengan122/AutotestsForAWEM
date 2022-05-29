@@ -15,7 +15,7 @@ public class GamesPage {
 
     @Step("Наличие игры Cradle of Empires во вкладке игры")
     public GamesPage checkIfTheGameYouWantIsInTheGamesTab() {
-        open(baseUrl);
+        open("");
         awemGames.click();
         return this;
     }

@@ -17,7 +17,7 @@ public class LanguagePage {
 
     @Step("Смена языка на Англ.")
     public LanguagePage сhangeLanguageOnSite() {
-        open(baseUrl);
+        open("");
         itemLanguageActive.hover();
         itemLanguage.click();
         return this;

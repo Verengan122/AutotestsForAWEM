@@ -1,17 +1,25 @@
 package awem.autotests.tests;
 
 import awem.autotests.config.TestBase;
+import awem.autotests.helpers.DriverUtils;
 import awem.autotests.pages.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.title;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestsUI extends TestBase {
 
     @Test
     @DisplayName("Проверка заголовка")
-    void checkingTitle() {
-        new TitlePage()
-                .checkTitleSiteAwem();
+    void checkTitleSiteAwem() {
+        open("");
+        String expectedTitle = "Awem Games";
+        String actualTitle = title();
+
+        assertThat(actualTitle).isEqualTo(expectedTitle);
     }
 
     @Test
@@ -32,15 +40,18 @@ public class TestsUI extends TestBase {
 
     @Test
     @DisplayName("Проверка журнала консоли на наличие ошибок")
-    void consoleShouldNotHaveErrorsTest() {
-        new ConsolePage()
-                .checkingTheConsoleLog();
+    void consoleShouldNotHaveErrorsTest(){
+        open("");
+        String consoleLogs = DriverUtils.getConsoleLogs();
+        String errorText = "SEVERE";
+
+        assertThat(consoleLogs).doesNotContain(errorText);
     }
 
     @Test
     @DisplayName("Проверка наличия вакансии на сайте")
-    void job() {
-    new VacanciPage()
+    void checkForJobVacanciesOnTheSite() {
+         new VacancyPage()
             .сheckingAvailabilityVacanciesOnSite()
             .validationOpeningFormsSubmitResume();
     }

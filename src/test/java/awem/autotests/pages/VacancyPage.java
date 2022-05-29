@@ -4,11 +4,10 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.open;
 
-public class VacanciPage {
+public class VacancyPage {
     SelenideElement
             awemCariers = $x("//*[@href='https://awem.com/careers/']"),
             cariersQA = $x("//*[@href='https://awem.com/careers/qa/']"),
@@ -19,9 +18,9 @@ public class VacanciPage {
 
 
     @Step("Проверка наличия вакансии QA middle на сайте")
-    public VacanciPage сheckingAvailabilityVacanciesOnSite() {
-        open(baseUrl);
-        awemCariers.shouldBe(visible).click();
+    public VacancyPage сheckingAvailabilityVacanciesOnSite() {
+        open("");
+        awemCariers.click();
         cariersQA.scrollIntoView("{block : \"center\"}").shouldBe(visible).click();
         vacancuMidleQA.scrollIntoView("{block : \"center\"}").click();
         buttonResponse.scrollIntoView("{block : \"center\"}").click();
@@ -29,7 +28,7 @@ public class VacanciPage {
     }
 
     @Step("Проверка открытия формы отправки формы резюме")
-    public VacanciPage validationOpeningFormsSubmitResume() {
+    public VacancyPage validationOpeningFormsSubmitResume() {
         searchForTextInForm.shouldBe(visible);
         return this;
     }
